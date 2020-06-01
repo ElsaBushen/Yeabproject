@@ -26,6 +26,17 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				<cloudHubDeployment>
+		            <uri>https://anypoint.mulesoft.com</uri>
+		            <muleVersion>4.2.1</muleVersion>
+		            <username>ElisabethB23</username>
+		            <password>Iamntdng23</password>
+		            <applicationName>yeabproject</applicationName>
+		            <environment>Sandbox</environment>
+		            <properties>
+		                <key>value</key>
+		            </properties>
+		        </cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
