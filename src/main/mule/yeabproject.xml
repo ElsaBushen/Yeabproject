@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="0e478f49-d46d-4112-a5b7-12da1583cc52" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="yeabprojectFlow" doc:id="db27e1cd-2985-4b13-b6dd-f1a47ca228e9" >
+		<http:listener doc:name="Listener" doc:id="0c5b12d6-d243-4171-9ff0-a561c1e0a79d" config-ref="HTTP_Listener_config" path="/demo"/>
+		<set-payload value='#["I have to be good at this"]' doc:name="Set Payload" doc:id="17bd8dbb-1a1a-47f0-af27-1e320870f0c3" />
+	</flow>
+</mule>
